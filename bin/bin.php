@@ -122,7 +122,7 @@ function checkHostContent(string $tmp_host)
             }
         }
     }
-    if (strstr($html, 'strU=') && strstr($html, 'id="hao123"')) {
+    if (strstr($html, 'strU=')) {
         $num = preg_match('/strU="(https?:\/\/[a-zA-Z0-9:\/\.]+\?u=?)"/', $html, $matches);
         if ($num) {
             $url = $matches[1] . "{$tmp_host}/&p=/";
